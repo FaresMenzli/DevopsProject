@@ -23,10 +23,10 @@ public class FactureServiceTest {
     @InjectMocks
    FactureServiceImpl  factureService;
 
-    Facture facture = new Facture(001222023L,1200, 0, null, null, null, null, null, null);
+    Facture facture = new Facture(001222023L,(float) 12345);
 
     @Test
-    public void findFactureTest(long l){
+    public void findFactureTest(){
         Mockito.when(facturerepo.findById(Mockito.anyLong())).thenReturn(Optional.of(facture));
         Facture f = factureService.retrieveFacture(1L);
         Assertions.assertNotNull(f);
