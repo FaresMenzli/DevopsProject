@@ -1,6 +1,8 @@
 package tn.esprit.rh.achat.entities;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.databind.ser.std.StdArraySerializers.FloatArraySerializer;
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -37,6 +39,12 @@ public class Facture implements Serializable {
 	@OneToMany(mappedBy = "facture")
 	@JsonIgnore
 	private Set<Reglement> reglements;
+	public Facture(Long idFacture, Float montantFacture) {
+		super();
+		this.idFacture = idFacture;
+		this.montantFacture = montantFacture;
+
+	}
 
 
 

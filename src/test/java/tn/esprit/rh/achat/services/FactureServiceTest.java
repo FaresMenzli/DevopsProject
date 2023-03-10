@@ -26,11 +26,10 @@ public class FactureServiceTest {
     Facture facture = new Facture(001222023L,1200, 0, null, null, null, null, null, null);
 
     @Test
-    public void findFactureTest()
-    {
+    public void findFactureTest(long l){
         Mockito.when(facturerepo.findById(Mockito.anyLong())).thenReturn(Optional.of(facture));
         Facture f = factureService.retrieveFacture(1L);
         Assertions.assertNotNull(f);
     }
-
+}
 
