@@ -39,5 +39,6 @@ public class Facture implements Serializable {
 	private Set<Reglement> reglements;
 
 
-
+	public Facture(long l, int i) {
+	}
 }
