@@ -19,4 +19,5 @@ public class StockServiceTest {
         List<Stock> listProduits = ss.retrieveAllStocks();
         Assertions.assertEquals(0, listProduits.size());
     }
+    //comment
 }
